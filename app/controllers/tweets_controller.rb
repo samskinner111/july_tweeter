@@ -1,6 +1,7 @@
 class TweetsController < ApplicationController
   before_action :set_tweet, only: [:show, :edit, :update, :destroy]
   before_action :authenticate_user!
+  include TweetsHelper
 
   def index
     @tweets = Tweet.all.order(created_at: :desc)
@@ -17,7 +18,8 @@ class TweetsController < ApplicationController
   end
 
   def create
-    @tweet = Tweet.new(tweet_params)
+    @tweet = Tweet.create(tweet_params)
+    @tweet = get_tagged(@tweet)
 
     respond_to do |format|
       if @tweet.save

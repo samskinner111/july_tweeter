@@ -1,0 +1,75 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ */
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome";
+
+/*
+  body {
+    background: url(<%#= asset_path "bg.jpg" %>) no-repeat;
+    background-size: cover;
+    opacity: 50%;
+  }
+
+  .container {
+    background: rgba(211,211,211,0.8);
+  }
+*/
+/* Navbar styling */
+.navbar-default .navbar-brand  {
+  font-family: 'Coffee House', cursive;
+  font-size: 30px;
+  color: rgb(29,161,242);
+}
+
+.navbar-default {
+    background-color: #EBEBEB;
+    border-color: rgb(29,161,242);
+    border-radius: 10px;
+    margin: 0px 5px 0px 5px;
+}
+
+#nav-font {
+  padding-top: 20px;
+  font-size: 18px;
+  color: rebeccapurple;
+}
+
+#handle {
+  font-size: 18px;
+  color: rgb(29,161,242);
+}
+
+#user-pic-nav {
+  border-radius: 50%;
+}
+
+/* Tweets styling */
+.message {
+  font-size: 20px;
+}
+
+.marg1 {
+  padding-left: 70px;
+}
+
+.marg2 {
+  padding-left: 55px;
+}
+
+.align {
+  text-align: right;
+  padding-right: 33px;
+}

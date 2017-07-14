@@ -46,7 +46,7 @@ class EpicenterController < ApplicationController
     @tag = Tag.find(params[:id])
   end
 
-    def following
+  def following
     @user = User.find(params[:id])
     @users = []
 

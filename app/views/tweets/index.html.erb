@@ -20,7 +20,7 @@
   <% @tweets.each do |tweet| %>
     <div class='row marg2'>
     <hr>
-      <div class='col-md-7 message'><%= tweet.message %></div>
+      <div class='col-md-7 message'><%= tweet.message.html_safe %></div>
       <div class='col-md-2 message'><%= link_to tweet.user.username, 
                                         show_user_path(id: tweet.user.id) %></div>
       <div class='col-md-3'>

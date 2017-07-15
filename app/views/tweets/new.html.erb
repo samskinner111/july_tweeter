@@ -1,5 +1,12 @@
-<h1>New Tweet</h1>
-
-<%= render 'form', tweet: @tweet, class: 'btn btn-success' %>
-
-<%= link_to 'Back', tweets_path %>
+<br>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class='row'>
+      <div class='col-md-6'><h1>New Tweet</h1></div>
+      <div class='col-md-6 pull-right' id='pad-27'><%= link_to 'Back to Homepage', tweets_path, class: 'btn btn-success btn-sm' %></div>
+    </div>
+    
+    <%= render 'form', tweet: @tweet, class: 'btn btn-success' %>
+    
+  </div>
+</div>

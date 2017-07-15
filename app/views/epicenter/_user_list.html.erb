@@ -4,7 +4,7 @@
       <div class="well user-list-wells">
         <div class="row">
           <div class="col-md-6">
-            <%= image_tag user.avatar.url, class: "user-pic-md" %>
+            <%= image_tag user.avatar.url, class: "pic-user-stats" %>
           </div>
           <div class="col-md-6">
             <p>
@@ -23,9 +23,8 @@
             <h3><%= user.name %></h3>
             <p>@<%= user.username %></p>
           <% end %>
-          <p>
-            <%= user.bio %>
-          </p>
+          <em><%= user.location%></em>
+          <p><%= user.bio %></p>
         </div>
       </div>
     </div>

@@ -2,13 +2,13 @@
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
     <div class='row'>
-      <div class="col-md-5" id='pad-25'>
+      <div class="col-md-5 pad-bot-25">
         <h2>Edit <%= resource_name.to_s.humanize %></h2>
       </div>
-      <div class="col-md-3" id='pad-50'>
+      <div class="col-md-3" id='pad-19'>
         <%= link_to "Return to Homepage", root_path, class: 'btn btn-primary btn-sm' %>
       </div>
-      <div class="col-md-3" id='pad-50' id='pull-right'>
+      <div class="col-md-3 pull-right" id='pad-19'>
         <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: 'btn btn-danger btn-sm' %>
       </div>
     </div>

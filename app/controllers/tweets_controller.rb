@@ -4,7 +4,7 @@ class TweetsController < ApplicationController
   include TweetsHelper
 
   def index
-    @tweets = Tweet.all.order(created_at: :desc)
+    @tweets = Tweet.order(created_at: :desc)
   end
 
   def show

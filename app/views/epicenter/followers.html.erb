@@ -3,7 +3,9 @@
   <div class="col-md-3">
     <div class="row">
       <div class="col-md-3">
-        <%= image_tag @user.avatar.url, class: "pic-user-stats" %>
+        <% if current_user.avatar.url != nil %>
+          <%= image_tag @user.avatar.url, class: "pic-user-stats" %>
+        <% end %>  
       </div>
       <div class="col-md-9">
         <h3><%= @user.name %></h3>

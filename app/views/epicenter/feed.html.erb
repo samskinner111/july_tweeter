@@ -3,7 +3,9 @@
   <div class="col-md-3 well">
     <div class="row">
       <div class="col-md-3">
-        <%= image_tag current_user.avatar.url, class: "pic-user-stats" %>
+        <% if current_user.avatar.url != nil %>
+          <%= image_tag current_user.avatar.url, class: "pic-user-stats" %>
+        <% end %>
       </div>
       <div class="col-md-5 col-md-offset-1">
         <p>
@@ -34,7 +36,9 @@
       <% @following_tweets.each do |tweet| %>
         <div class="well">
           <p>
-            <%= image_tag tweet.user.avatar.url, class: "pic-user-sm" %>&nbsp;
+            <% if current_user.avatar.url != nil %>
+              <%= image_tag tweet.user.avatar.url, class: "pic-user-sm" %>&nbsp;
+            <% end %>
             <%= link_to tweet.user.name, show_user_path(id: tweet.user_id) %> 
             @<%= link_to tweet.user.username, show_user_path(id: tweet.user_id) %>
             &#8226; <%= time_ago_in_words(tweet.created_at) if Time.now - tweet.created_at < 86400 %> <%= tweet.created_at.strftime('%b %e') if Time.now - tweet.created_at > 86400 %> 

@@ -12,7 +12,7 @@
     </div>
     <p><%= @user.bio %></p>
     <p><i class="fa fa-map-marker"></i> <%= @user.location %></p>
-    <p><i class="fa fa-calendar"></i> Joined <%= @user.created_at.strftime("%B %Y") %></p>
+    <p><i class="fa fa-calendar"></i> Joined: <%= @user.created_at.strftime("%B %Y") %></p>
   </div>
   <div class="col-md-9 col-md-offset-1">
     <%= render 'user_list' %>

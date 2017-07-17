@@ -36,7 +36,7 @@
       <% @following_tweets.each do |tweet| %>
         <div class="well">
           <p>
-            <% if current_user.avatar.url != nil %>
+            <% if tweet.user.avatar.url != nil %>
               <%= image_tag tweet.user.avatar.url, class: "pic-user-sm" %>&nbsp;
             <% end %>
             <%= link_to tweet.user.name, show_user_path(id: tweet.user_id) %> 

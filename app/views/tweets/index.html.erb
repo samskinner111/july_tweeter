@@ -6,20 +6,20 @@
 <div class='bg'>
   <br>
   <h1>Tweets Update!</h1>
-  <div class='col-md-3 align'>
+  <div class='col-md-3 align-r'>
     <%= link_to 'New Tweet', new_tweet_path, class: 'btn btn-primary' %>
   </div>
   <br><br>
-  <div class='container' id='tweet-block1'>
+  <div class='container'>
     <div class='row'>
-      <div class='col-md-7 marg1'><h3>Tweet</h3></div>
+      <div class='col-md-7 pad-left-70'><h3>Tweet</h3></div>
       <div class='col-md-2'><h3>Tweeter</h3></div>
     </div>
   </div>
 
-  <div class='container' id='tweet-block2'>
+  <div class='container'>
     <% @tweets.each do |tweet| %>
-      <div class='row marg2'>
+      <div class='row pad-left-55'>
       <hr>
         <div class='col-md-7 message'><%= tweet.message.html_safe %></div>
         <div class='col-md-2 message'><%= link_to tweet.user.username, 

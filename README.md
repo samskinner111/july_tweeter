@@ -20,3 +20,4 @@ In Terminal, run: 'figaro heroku:set -e production'
 
 This pushes the keys to Heroku.  Or on Heroku, you can click 'reveal config vars' and set manually.
 
+Then run 'rails db:setup'.

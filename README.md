@@ -1,19 +1,22 @@
-July_Tweeter, 2017
+Tweeter, July 2017
 
 Ruby version: 2.4.1, Rails version: 5.1.2
 
 This app is a mini-blog modelled after Twitter.  
 
 *** Local SetUp Instructions ***
-The app itself needs only a 'rails db:setup' to get started.  The seeds contain only the minimum data for creating 5 users.  You will need to flesh out the profiles and add images.
+To get started, run 'bundle install', 'figaro install' and then 'rails db:setup'.  The seeds contain the data for creating 5 users.  You will need to add images.
 
-
-*** Deployment Instructions ***
+*** Deployment Instructions (Heroku) ***
 The app uses the gems 'carrierwave' and 'fog' to store images with AWS.  You will need AWS S3 credentials and a bucket to implement.
 
-In Terminal, using the AWS supplied keys, run:
+Sample keys (put in config/application.yml)
+  AWS_ACCESS_KEY_ID: xxx
+  AWS_SECRET_ACCESS_KEY: yyy
+  S3_REGION: us-east-1
+  S3_BUCKET_NAME: bucketname
 
-  heroku config:set S3_BUCKET_NAME=abc S3_REGION=def
-  heroku config:set AWS_ACCESS_KEY_ID=xxx AWS_SECRET_ACCESS_KEY=yyy
+In Terminal, run: 'figaro heroku:set -e production'
 
-or on Heroku, click 'reveal config vars' and set manually.
+This pushes the keys to Heroku.  Or on Heroku, you can click 'reveal config vars' and set manually.
+
